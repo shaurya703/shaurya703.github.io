@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shaurya Kesarwani — Software Engineer</title>
+<meta name="description" content="Final-year CS undergrad in Bengaluru. Production-minded systems: 26k req/s Go services, explainable ML, real-time full-stack apps, and Indian public-data tools.">
+<style>
+  :root {
+    --bg: #0b0d12; --card: #12151d; --border: #232837;
+    --text: #e8eaf0; --muted: #9aa3b5; --accent: #6ea8fe; --metric: #7ee2a8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 80px; }
+  header h1 { font-size: 2rem; letter-spacing: -0.5px; }
+  .tagline { color: var(--muted); margin: 10px 0 18px; max-width: 640px; }
+  .links { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.95rem; }
+  .links a { border: 1px solid var(--border); padding: 6px 14px; border-radius: 999px; }
+  .links a:hover { border-color: var(--accent); text-decoration: none; }
+  h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin: 48px 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; display: flex; flex-direction: column; gap: 8px;
+  }
+  .card h3 { font-size: 1.05rem; }
+  .card h3 a { color: var(--text); }
+  .stack { font-size: 0.8rem; color: var(--muted); }
+  .metric { color: var(--metric); font-size: 0.9rem; font-weight: 600; }
+  .card p { font-size: 0.92rem; color: #c6ccd9; }
+  .oss li { margin-bottom: 10px; font-size: 0.95rem; }
+  .oss { list-style: none; }
+  .oss span { color: var(--muted); }
+  footer { margin-top: 64px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 24px; }
+  @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Shaurya Kesarwani</h1>
+  <p class="tagline">Final-year CS undergrad, Bengaluru. I ship complete, production-minded systems —
+  low-latency backends, explainable ML, real-time full-stack products, and tools that make
+  messy Indian public data usable. Everything below is tested, documented, and reproducible with one command.</p>
+  <nav class="links">
+    <a href="https://github.com/shaurya703">GitHub</a>
+    <a href="mailto:kesar.shaurya@gmail.com">kesar.shaurya@gmail.com</a>
+    <a href="https://github.com/shaurya703/shaurya703#readme">Profile README</a>
+  </nav>
+</header>
+
+<h2>Selected work</h2>
+<div class="grid">
+  <div class="card">
+    <h3><a href="https://github.com/shaurya703/linkforge">LinkForge</a></h3>
+    <div class="stack">Go · PostgreSQL · Redis · k6 · Prometheus</div>
+    <div class="metric">~26,500 req/s · p99 ≈ 5.4 ms · 99.99% cache-hit · zero errors</div>
+    <p>High-throughput URL shortener: cache-aside Redis, rate limiting, async click analytics, full observability. Load-verified on a single instance.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/shaurya703/devboard">DevBoard</a></h3>
+    <div class="stack">React/TypeScript · Express · Prisma · Socket.IO</div>
+    <div class="metric">Live multi-user sync · JWT refresh rotation with reuse detection</div>
+    <p>Real-time collaborative Kanban: optimistic drag-and-drop with rollback, owner/editor/viewer roles enforced on every endpoint, live activity feed.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/shaurya703/credit-risk-explainer">Credit Risk Explainer</a></h3>
+    <div class="stack">Python · XGBoost · SHAP · FastAPI · Streamlit</div>
+    <div class="metric">ROC-AUC 0.871 · PR-AUC 0.404 vs 0.067 baseline · Brier 0.049</div>
+    <p>Loan-default prediction where every score ships with a SHAP explanation — because a score you can't explain is a score you can't audit.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/shaurya703/hidden-mutual-fund-fees">Hidden Mutual-Fund Fees</a></h3>
+    <div class="stack">Python · pandas · statsmodels</div>
+    <div class="metric">1,084 fund pairs · Direct wins 99% · ≈₹27 lakh lost per 20-yr SIP</div>
+    <p>Measured the hidden distributor commission in Indian mutual funds from official NAV data. The gap between identical Regular/Direct plans is the fee.</p>
+  </div>
+  <div class="card">
+    <h3><a href="https://github.com/shaurya703/wafer-yield-predictor">Wafer Yield Predictor</a></h3>
+    <div class="stack">Python · XGBoost · imbalanced-learn · SHAP</div>
+    <div class="metric">86% FAIL recall at a 6.6% failure rate (accuracy is the wrong metric)</div>
+    <p>Fab pass/fail prediction from ~590 sensor traces, with per-wafer SHAP attribution so engineers can trace a yield excursion to its sensors.</p>
+  </div>
+  <div class="card">
+    <h3>Civic data tools <span class="stack">(4 repos)</span></h3>
+    <div class="stack">Python/FastAPI · React/TypeScript · Docker</div>
+    <div class="metric">133 tests · three-state engines that never overclaim</div>
+    <p><a href="https://github.com/shaurya703/schemefinder">SchemeFinder</a> (scheme eligibility) ·
+       <a href="https://github.com/shaurya703/safedose">SafeDose</a> (spurious-drug batches) ·
+       <a href="https://github.com/shaurya703/mandicompass">MandiCompass</a> (mandi net prices) ·
+       <a href="https://github.com/shaurya703/jalcheck">JalCheck</a> (water contamination)</p>
+  </div>
+</div>
+
+<h2>Open source</h2>
+<ul class="oss">
+  <li><a href="https://github.com/dolthub/dolt/pull/11449">dolthub/dolt</a> <span>— pinned aborted-rebase semantics in enginetests; reproduced &amp; triaged a reported error-message bug</span></li>
+  <li><a href="https://github.com/alibaba/open-code-review/pull/792">alibaba/open-code-review</a> <span>— fixed lazy-route black-screen flash with React 18 startTransition + tests</span></li>
+  <li><a href="https://github.com/cozystack/cozystack/pull/3664">cozystack/cozystack (CNCF)</a> <span>— contract tests pinning label-automation workflows, mutation-verified</span></li>
+</ul>
+
+<footer>
+  B.Tech CSE, PES University, Bengaluru — final year (2027) · Go · TypeScript · Python · SQL<br>
+  This page is intentionally a single static HTML file.
+</footer>
+</div>
+</body>
+</html>
